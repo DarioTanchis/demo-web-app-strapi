@@ -23,18 +23,19 @@
     },
     "description": {
       "type": "richtext",
-      "required": true
+      "required": true,
+      "minLength": 5,
+      "maxLength": 500
     },
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "minLength": 2,
+      "maxLength": 25
     },
     "phone": {
       "type": "string",
       "required": false
-    },
-    "email": {
-      "type": "email"
     },
     "price": {
       "type": "integer",
@@ -48,11 +49,14 @@
       "target": "api::category.category",
       "inversedBy": "listings"
     },
-    "user": {
+    "madeby": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "listings"
+    },
+    "email": {
+      "type": "string"
     }
   }
 }

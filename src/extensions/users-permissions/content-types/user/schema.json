@@ -69,7 +69,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::listing.listing",
-      "mappedBy": "user"
+      "mappedBy": "madeby"
     }
   }
 }
